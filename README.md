@@ -1,6 +1,6 @@
 # feathers-json-patch
 
-Add JSON patch support to any [Feathers](https://feathersjs.com) database adapter or service.
+Add [JSON Patch](http://jsonpatch.com/) support to any [Feathers](https://feathersjs.com) database adapter or service.
 
 ```bash
 $ npm install --save feathers-json-patch
