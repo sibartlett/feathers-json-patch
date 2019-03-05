@@ -65,7 +65,6 @@ if (diff.length) {
 ```http
 PATCH /messages HTTP/1.1
 Accept: application/json
-Authorization: Token "YOUR SDE ACCESS TOKEN"
 
 [
     {

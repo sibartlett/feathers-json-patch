@@ -9,5 +9,15 @@
   "main": "index.js",
   "dependencies": {
     "fast-json-patch": "^2.0.7"
-  }
+  },
+  "keywords": [
+    "feathers",
+    "feathers-plugin",
+    "REST",
+    "Socket.io",
+    "realtime",
+    "json",
+    "patch",
+    "service"
+  ]
 }

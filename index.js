@@ -29,11 +29,11 @@ const wrap = service => {
 
   if (typeof service.patch === 'function') {
     newService.patch = (id, data, params) => {
-      if (Array.isArray(data)) {
+      if (id && Array.isArray(data)) {
         return service
           .get(id, params)
           .then(document => applyPatch(document, data).newDocument)
-          .then(document => service.patch(id, document, params));
+          .then(document => service.update(id, document, params));
       } else {
         return service.patch(id, data, params);
       }
