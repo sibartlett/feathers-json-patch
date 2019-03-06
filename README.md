@@ -63,7 +63,7 @@ if (diff.length) {
 ### HTTP
 
 ```http
-PATCH /messages HTTP/1.1
+PATCH /messages/1 HTTP/1.1
 Accept: application/json
 
 [
@@ -85,7 +85,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "id": 36,
+    "id": 1,
     "text": "My updated message!",
     "tags": ["info"]
 }
