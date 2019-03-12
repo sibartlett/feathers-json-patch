@@ -1,6 +1,6 @@
 {
   "name": "feathers-json-patch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Add JSON patch support to any Feathers service",
   "homepage": "https://github.com/sibartlett/feathers-json-patch",
   "repository": "git://github.com/sibartlett/feathers-json-patch",
