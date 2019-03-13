@@ -1,5 +1,13 @@
 const { applyPatch } = require("fast-json-patch");
 
+const getSubDocument = (document, patch) => {
+  const keys = patch.map(x => x.path.split("/")[1]);
+  return keys.reduce((doc, key) => {
+    doc[key] = document[key];
+    return doc;
+  }, {});
+};
+
 const wrap = service => {
   if (
     typeof service.get !== "function" ||
@@ -16,6 +24,7 @@ const wrap = service => {
       if (id && Array.isArray(data)) {
         return service
           .get(id, params)
+          .then(document => getSubDocument(document, data))
           .then(document => applyPatch(document, data).newDocument)
           .then(document => service.patch(id, document, params));
       } else {
